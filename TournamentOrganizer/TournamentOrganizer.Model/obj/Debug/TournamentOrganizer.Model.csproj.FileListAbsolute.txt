@@ -1,0 +1,10 @@
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\TournamentOrganizer.Model.dll.config
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\TournamentOrganizer.Model.dll
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\TournamentOrganizer.Model.pdb
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\EntityFramework.dll
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\EntityFramework.xml
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\obj\Debug\TournamentOrganizer.Model.csprojResolveAssemblyReference.cache
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\obj\Debug\TournamentOrganizer.Model.dll
+D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer.Model\obj\Debug\TournamentOrganizer.Model.pdb

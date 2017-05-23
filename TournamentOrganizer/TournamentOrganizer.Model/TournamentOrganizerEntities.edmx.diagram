@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67decbf6442a489dbb0577543597ee0c" Name="Diagram1">
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Game" Width="1.5" PointX="1.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Gender" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Match" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Participant" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Role" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Score" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Stage" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Subdivision" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Team" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.TeamParticipant" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Tournament" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.User" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.UserState" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Tournament_GameId" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_User_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Stage" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Team1" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Team2" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Participant_Subdivision" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Participant_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_TeamParticipant_Participant" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Score_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Stage_Subdivision" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Subdivision_TournamentId" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Team_SubdivisionId" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_TeamParticipant_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_User_CreatedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_User_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_User_UserState" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
