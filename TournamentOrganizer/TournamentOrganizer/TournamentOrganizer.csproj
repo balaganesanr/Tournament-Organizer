@@ -110,6 +110,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="MainApp\app\app.js" />
+    <Content Include="MainApp\app\LoggedOut\login\LoginController.js" />
+    <Content Include="MainApp\app\LoggedOut\_LoggedOutLayout.html" />
+    <Content Include="MainApp\app\LoggedOut\login\_login.html" />
+    <Content Include="MainApp\app\shared\authenticate.js" />
+    <Content Include="MainApp\app\main.js" />
+    <Content Include="MainApp\app\shared\commonService.js" />
+    <Content Include="MainApp\assets\application\layout\loggedout.css" />
+    <Content Include="MainApp\assets\foundation\foundation.css" />
+    <Content Include="MainApp\assets\foundation\foundation.min.css" />
+    <Content Include="MainApp\assets\Sementic-ui\components\grid\grid.css" />
+    <Content Include="MainApp\assets\Sementic-ui\components\grid\grid.min.css" />
+    <Content Include="MainApp\assets\Sementic-ui\semantic.css" />
+    <Content Include="MainApp\scripts\angular\angular_Local_Storage\angular-local-storage.js" />
+    <Content Include="MainApp\scripts\angular\angular_Local_Storage\angular-local-storage.min.js" />
+    <Content Include="MainApp\scripts\Jquery\Sementic-ui\semantic.js" />
+    <Content Include="MainApp\assets\Sementic-ui\semantic.min.css" />
+    <Content Include="MainApp\scripts\Jquery\Sementic-ui\semantic.min.js" />
+    <Content Include="MainApp\assets\style.css" />
+    <Content Include="MainApp\scripts\angular\angular-animate\angular-animate.js" />
+    <Content Include="MainApp\scripts\angular\angular-animate\angular-animate.min.js" />
+    <Content Include="MainApp\scripts\angular\angular.js" />
+    <Content Include="MainApp\scripts\angular\angular.min.js" />
+    <Content Include="MainApp\scripts\angular\ocLazyLoad\ocLazyLoad.js" />
+    <Content Include="MainApp\scripts\angular\ocLazyLoad\ocLazyLoad.min.js" />
+    <Content Include="MainApp\scripts\angular\ui-router\angular-ui-router.js" />
+    <Content Include="MainApp\scripts\angular\ui-router\angular-ui-router.min.js" />
+    <Content Include="MainApp\scripts\Jquery\foundation\foundation.js" />
+    <Content Include="MainApp\scripts\Jquery\foundation\foundation.min.js" />
+    <Content Include="MainApp\scripts\Jquery\jquery.js" />
+    <Content Include="MainApp\scripts\Jquery\jquery.min.js" />
+    <Content Include="MainApp\scripts\requirejs\require.js" />
+    <Content Include="MainApp\scripts\requirejs\require.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +168,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="MainApp\app\LoggedIn\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
