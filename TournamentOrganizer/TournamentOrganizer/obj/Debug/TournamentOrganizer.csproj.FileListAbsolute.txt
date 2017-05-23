@@ -1,43 +1,41 @@
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\ApplicationInsights.config
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\csc.exe
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\System.Collections.Immutable.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\System.Reflection.Metadata.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\vbc.exe
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\VBCSCompiler.exe
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\VBCSCompiler.exe.config
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.dll.config
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.pdb
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.Agent.Intercept.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.DependencyCollector.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.PerfCounterCollector.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.ServerTelemetryChannel.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.Web.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.WindowsServer.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.ApplicationInsights.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Newtonsoft.Json.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Net.Http.Formatting.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.WebHost.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.DependencyCollector.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.Web.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.WindowsServer.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.ApplicationInsights.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Newtonsoft.Json.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Net.Http.Formatting.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.WebHost.xml
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\obj\Debug\TournamentOrganizer.csprojResolveAssemblyReference.cache
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\obj\Debug\TournamentOrganizer.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\obj\Debug\TournamentOrganizer.pdb
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.BL.dll
-D:\Balaganesan\Bala\Gislen\TT 2017\App\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.BL.pdb
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\ApplicationInsights.config
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\csc.exe
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\System.Collections.Immutable.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\vbc.exe
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\VBCSCompiler.exe
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\roslyn\VBCSCompiler.exe.config
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.dll.config
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\TournamentOrganizer.pdb
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.DependencyCollector.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.Web.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.WindowsServer.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.ApplicationInsights.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Newtonsoft.Json.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Net.Http.Formatting.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.WebHost.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.DependencyCollector.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.Web.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.AI.WindowsServer.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.ApplicationInsights.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\Newtonsoft.Json.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Net.Http.Formatting.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\bin\System.Web.Http.WebHost.xml
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\obj\Debug\TournamentOrganizer.csprojResolveAssemblyReference.cache
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\obj\Debug\TournamentOrganizer.dll
+E:\Project\Learnings\AppTT\Tournament-Organizer\TournamentOrganizer\TournamentOrganizer\obj\Debug\TournamentOrganizer.pdb
