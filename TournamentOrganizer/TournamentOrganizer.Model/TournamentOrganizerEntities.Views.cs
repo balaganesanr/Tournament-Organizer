@@ -11,7 +11,7 @@ using System.Data.Entity.Infrastructure.MappingViews;
 
 [assembly: DbMappingViewCacheTypeAttribute(
     typeof(TournamentOrganizer.Model.TournamentOrganizerEntities),
-    typeof(Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets291a28c6de83d79ff08161b4256c4adc10a0d66691dc81691aa7df0177541f3a))]
+    typeof(Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets574073b30025e8fc1eb9486feaaf027d7c223e22d73415eda2f7438abcc7a1db))]
 
 namespace Edm_EntityMappingGeneratedViews
 {
@@ -23,14 +23,14 @@ namespace Edm_EntityMappingGeneratedViews
     /// Implements a mapping view cache.
     /// </summary>
     [GeneratedCode("Entity Framework Power Tools", "0.9.0.0")]
-    internal sealed class ViewsForBaseEntitySets291a28c6de83d79ff08161b4256c4adc10a0d66691dc81691aa7df0177541f3a : DbMappingViewCache
+    internal sealed class ViewsForBaseEntitySets574073b30025e8fc1eb9486feaaf027d7c223e22d73415eda2f7438abcc7a1db : DbMappingViewCache
     {
         /// <summary>
         /// Gets a hash value computed over the mapping closure.
         /// </summary>
         public override string MappingHashValue
         {
-            get { return "291a28c6de83d79ff08161b4256c4adc10a0d66691dc81691aa7df0177541f3a"; }
+            get { return "574073b30025e8fc1eb9486feaaf027d7c223e22d73415eda2f7438abcc7a1db"; }
         }
 
         /// <summary>
@@ -206,11 +206,11 @@ namespace Edm_EntityMappingGeneratedViews
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Gender
-        [TournamentOrganizerModel.Store.Gender](T1.Gender_ID, T1.Gender_NAME)
+        [TournamentOrganizerModel.Store.Gender](T1.Gender_ID, T1.Gender_Name)
     FROM (
         SELECT 
             T.ID AS Gender_ID, 
-            T.NAME AS Gender_NAME, 
+            T.Name AS Gender_Name, 
             True AS _from0
         FROM TournamentOrganizerEntities.Genders AS T
     ) AS T1");
@@ -265,11 +265,11 @@ namespace Edm_EntityMappingGeneratedViews
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Role
-        [TournamentOrganizerModel.Store.Role](T1.Role_Id, T1.Role_RoleName)
+        [TournamentOrganizerModel.Store.Role](T1.Role_Id, T1.Role_Name)
     FROM (
         SELECT 
             T.Id AS Role_Id, 
-            T.RoleName AS Role_RoleName, 
+            T.Name AS Role_Name, 
             True AS _from0
         FROM TournamentOrganizerEntities.Roles AS T
     ) AS T1");
@@ -468,11 +468,11 @@ namespace Edm_EntityMappingGeneratedViews
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Genders
-        [TournamentOrganizerModel.Gender](T1.Gender_ID, T1.Gender_NAME)
+        [TournamentOrganizerModel.Gender](T1.Gender_ID, T1.Gender_Name)
     FROM (
         SELECT 
             T.ID AS Gender_ID, 
-            T.NAME AS Gender_NAME, 
+            T.Name AS Gender_Name, 
             True AS _from0
         FROM TournamentOrganizerModelStoreContainer.Gender AS T
     ) AS T1");
@@ -527,11 +527,11 @@ namespace Edm_EntityMappingGeneratedViews
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Roles
-        [TournamentOrganizerModel.Role](T1.Role_Id, T1.Role_RoleName)
+        [TournamentOrganizerModel.Role](T1.Role_Id, T1.Role_Name)
     FROM (
         SELECT 
             T.Id AS Role_Id, 
-            T.RoleName AS Role_RoleName, 
+            T.Name AS Role_Name, 
             True AS _from0
         FROM TournamentOrganizerModelStoreContainer.Role AS T
     ) AS T1");

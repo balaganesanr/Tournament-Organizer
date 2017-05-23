@@ -5,14 +5,14 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="Gender">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="tinyint" Nullable="false" />
-    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Match">
     <Key>
@@ -38,7 +38,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="tinyint" Nullable="false" />
-    <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Score">
     <Key>
@@ -54,7 +54,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="SubdivisionId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Subdivision">
@@ -62,7 +62,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="TournamentId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Team">
@@ -70,7 +70,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="SubdivisionId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TeamParticipant">
@@ -86,7 +86,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="GameId" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="User">
@@ -105,12 +105,12 @@
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="LastLoginDate" Type="datetime" />
     <Property Name="LastPasswordChangedDate" Type="datetime" />
-    <Property Name="ForgotPasswordToken" Type="varchar" MaxLength="500" Nullable="false" />
-    <Property Name="ForgotPasswordTokenSentOn" Type="datetime" Nullable="false" />
-    <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedBy" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="ForgotPasswordToken" Type="varchar" MaxLength="500" />
+    <Property Name="ForgotPasswordTokenSentOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
   </EntityType>
   <EntityType Name="UserState">
     <Key>
@@ -276,7 +276,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_User_CreatedBy">
-    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
     <End Role="User1" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
@@ -300,7 +300,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_User_ModifiedBy">
-    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
     <End Role="User1" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">

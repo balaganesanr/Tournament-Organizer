@@ -4,132 +4,132 @@
     <EntitySetMapping Name="Games">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Game">
         <MappingFragment StoreEntitySet="Game">
-          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Genders">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Gender">
         <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="NAME" ColumnName="NAME" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Matches">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Match">
         <MappingFragment StoreEntitySet="Match">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="StageId" ColumnName="StageId" />
-          <ScalarProperty Name="Team1Id" ColumnName="Team1Id" />
-          <ScalarProperty Name="Team2Id" ColumnName="Team2Id" />
-          <ScalarProperty Name="ScheduledDate" ColumnName="ScheduledDate" />
           <ScalarProperty Name="WinnerTeamId" ColumnName="WinnerTeamId" />
+          <ScalarProperty Name="ScheduledDate" ColumnName="ScheduledDate" />
+          <ScalarProperty Name="Team2Id" ColumnName="Team2Id" />
+          <ScalarProperty Name="Team1Id" ColumnName="Team1Id" />
+          <ScalarProperty Name="StageId" ColumnName="StageId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Participants">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Participant">
         <MappingFragment StoreEntitySet="Participant">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="SubdivisionId" ColumnName="SubdivisionId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Roles">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Role">
         <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Scores">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Score">
         <MappingFragment StoreEntitySet="Score">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Team1SetScore" ColumnName="Team1SetScore" />
-          <ScalarProperty Name="Team2SetScore" ColumnName="Team2SetScore" />
           <ScalarProperty Name="WinnerTeamId" ColumnName="WinnerTeamId" />
+          <ScalarProperty Name="Team2SetScore" ColumnName="Team2SetScore" />
+          <ScalarProperty Name="Team1SetScore" ColumnName="Team1SetScore" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Stages">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Stage">
         <MappingFragment StoreEntitySet="Stage">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="SubdivisionId" ColumnName="SubdivisionId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Subdivisions">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Subdivision">
         <MappingFragment StoreEntitySet="Subdivision">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Teams">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Team">
         <MappingFragment StoreEntitySet="Team">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="SubdivisionId" ColumnName="SubdivisionId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TeamParticipants">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.TeamParticipant">
         <MappingFragment StoreEntitySet="TeamParticipant">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
           <ScalarProperty Name="ParticipantId" ColumnName="ParticipantId" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tournaments">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.Tournament">
         <MappingFragment StoreEntitySet="Tournament">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
-          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
-          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
-          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
-          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
-          <ScalarProperty Name="ForgotPasswordToken" ColumnName="ForgotPasswordToken" />
-          <ScalarProperty Name="ForgotPasswordTokenSentOn" ColumnName="ForgotPasswordTokenSentOn" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
           <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ForgotPasswordTokenSentOn" ColumnName="ForgotPasswordTokenSentOn" />
+          <ScalarProperty Name="ForgotPasswordToken" ColumnName="ForgotPasswordToken" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserStates">
       <EntityTypeMapping TypeName="TournamentOrganizerModel.UserState">
         <MappingFragment StoreEntitySet="UserState">
-          <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

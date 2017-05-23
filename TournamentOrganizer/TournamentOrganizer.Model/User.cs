@@ -35,11 +35,11 @@ namespace TournamentOrganizer.Model
         public Nullable<System.DateTime> LastLoginDate { get; set; }
         public Nullable<System.DateTime> LastPasswordChangedDate { get; set; }
         public string ForgotPasswordToken { get; set; }
-        public System.DateTime ForgotPasswordTokenSentOn { get; set; }
-        public System.Guid CreatedBy { get; set; }
-        public System.DateTime CreatedOn { get; set; }
-        public System.Guid ModifiedBy { get; set; }
-        public System.DateTime ModifiedOn { get; set; }
+        public Nullable<System.DateTime> ForgotPasswordTokenSentOn { get; set; }
+        public Nullable<System.Guid> CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedOn { get; set; }
+        public Nullable<System.Guid> ModifiedBy { get; set; }
+        public Nullable<System.DateTime> ModifiedOn { get; set; }
     
         public virtual Gender Gender { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
