@@ -1,0 +1,11 @@
+*.config
+*.suo
+*.cache
+*.xml
+*.dll
+*.exe
+*.targets
+*.pdb
+*.cache
+*.txt
+*.cache
