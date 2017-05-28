@@ -3,9 +3,9 @@
 
     tournamentOrganiser
         .service('commonService', function () {
-          
-        }).factory('appServices', ['Enum', '$filter',
-                    function (Enum, $filter) {
+
+        }).factory('appServices', ['Notification', 'Enum', '$filter',
+                    function (Notification, Enum, $filter) {
                         var appServices = {};
                         appServices.oldData = null;
                         var cFilter = $filter;
@@ -46,6 +46,20 @@
                         appServices.showException = function (data) {
 
                         }
+                        appServices.showAlert = function (msg, type) {
+                            if (type == Enum.MessageType.INFO) {
+                                Notification.info(msg);
+                            }
+                            else if (type == Enum.MessageType.SUCCESS) {
+                                Notification.success(msg);
+                            }
+                            else if (type == Enum.MessageType.ERROR) {
+                                Notification.error(msg);
+                            }
+                            else if (type == Enum.MessageType.WARNING) {
+                                Notification.warning(msg);
+                            }
+                        }
 
                         appServices.getObject = function (lists, propertyKey, propertyValue) {
                             if (propertyValue == null || angular.isUndefined(propertyValue))
@@ -60,7 +74,7 @@
                             return null;
                         }
 
-                       
+
                         /*
                          * To check object exists
                          */

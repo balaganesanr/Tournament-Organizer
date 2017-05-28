@@ -71,12 +71,52 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -86,6 +126,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -109,14 +153,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplicationImages\General\gislen_icon.png" />
+    <Content Include="ApplicationImages\General\gislen_main_logo.png" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="MainApp\app\app.js" />
+    <Content Include="MainApp\app\LoggedIn\admin\dashboard\DashboardController.js" />
+    <Content Include="MainApp\app\LoggedIn\admin\dashboard\DashboardService.js" />
+    <Content Include="MainApp\app\LoggedIn\admin\dashboard\_dashboard.html" />
+    <Content Include="MainApp\app\LoggedIn\LoggedInController.js" />
+    <Content Include="MainApp\app\LoggedIn\users\dashboard\DashboardController.js" />
+    <Content Include="MainApp\app\LoggedIn\users\dashboard\DashboardService.js" />
+    <Content Include="MainApp\app\LoggedIn\users\dashboard\_dashboard.html" />
+    <Content Include="MainApp\app\LoggedIn\_LoggedInLayout.html" />
     <Content Include="MainApp\app\LoggedOut\login\LoginController.js" />
     <Content Include="MainApp\app\LoggedOut\_LoggedOutLayout.html" />
     <Content Include="MainApp\app\LoggedOut\login\_login.html" />
     <Content Include="MainApp\app\shared\authenticate.js" />
     <Content Include="MainApp\app\main.js" />
+    <Content Include="MainApp\app\shared\commonDirective.js" />
     <Content Include="MainApp\app\shared\commonService.js" />
     <Content Include="MainApp\assets\application\layout\loggedout.css" />
     <Content Include="MainApp\assets\foundation\foundation.css" />
@@ -267,8 +322,19 @@
     <Content Include="MainApp\assets\Sementic-ui\themes\default\assets\images\flags.png" />
     <Content Include="MainApp\assets\Sementic-ui\themes\github\assets\fonts\octicons.svg" />
     <Content Include="MainApp\assets\Sementic-ui\themes\material\assets\fonts\icons.svg" />
+    <Content Include="MainApp\scripts\angular\angular-validation\angular-validation-rule.js" />
+    <Content Include="MainApp\scripts\angular\angular-validation\angular-validation-rule.min.js" />
+    <Content Include="MainApp\scripts\angular\angular-validation\angular-validation.js" />
+    <Content Include="MainApp\scripts\angular\angular-validation\angular-validation.min.js" />
     <Content Include="MainApp\scripts\angular\angular_Local_Storage\angular-local-storage.js" />
     <Content Include="MainApp\scripts\angular\angular_Local_Storage\angular-local-storage.min.js" />
+    <Content Include="MainApp\scripts\angular\angular_ui_notification\angular-ui-notification.css" />
+    <Content Include="MainApp\scripts\angular\angular_ui_notification\angular-ui-notification.js" />
+    <Content Include="MainApp\scripts\angular\angular_ui_notification\angular-ui-notification.min.css" />
+    <Content Include="MainApp\scripts\angular\angular_ui_notification\angular-ui-notification.min.js" />
+    <Content Include="MainApp\scripts\angular\OrgChart\angular_orgchart.js" />
+    <Content Include="MainApp\scripts\Jquery\OrgChart\css\jquery.orgchart.css" />
+    <Content Include="MainApp\scripts\Jquery\OrgChart\js\jquery.orgchart.js" />
     <Content Include="MainApp\scripts\Jquery\Sementic-ui\semantic.js" />
     <Content Include="MainApp\assets\Sementic-ui\semantic.min.css" />
     <Content Include="MainApp\scripts\Jquery\Sementic-ui\semantic.min.js" />
@@ -290,11 +356,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application_Code\ApplicationUser.cs" />
+    <Compile Include="Application_Code\ApplicationUserManager.cs" />
+    <Compile Include="Application_Code\AuthRepository.cs" />
+    <Compile Include="Application_Code\CustomUserValidator.cs" />
+    <Compile Include="Application_Code\IdentityHelper.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Providers\SimpleRefreshTokenProvider.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -315,6 +394,8 @@
     <Content Include="MainApp\assets\Sementic-ui\themes\material\assets\fonts\icons.eot" />
     <Content Include="MainApp\assets\Sementic-ui\themes\material\assets\fonts\icons.ttf" />
     <Content Include="MainApp\assets\Sementic-ui\themes\material\assets\fonts\icons.woff" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Content Include="ImageHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -324,14 +405,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="MainApp\app\LoggedIn\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TournamentAspnetIdentity\TournamentAspnetIdentity.csproj">
+      <Project>{739d14ef-e756-418a-8aeb-cdaa7a81ab65}</Project>
+      <Name>TournamentAspnetIdentity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TournamentOrganizer.BL\TournamentOrganizer.BL.csproj">
       <Project>{3281b204-e3ef-4ca0-84f9-98d285983dfb}</Project>
       <Name>TournamentOrganizer.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TournamentOrganizer.Model\TournamentOrganizer.Model.csproj">
+      <Project>{05d41787-d412-4300-8ed0-599bb7863b44}</Project>
+      <Name>TournamentOrganizer.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

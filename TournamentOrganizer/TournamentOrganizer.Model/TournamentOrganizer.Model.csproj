@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs">
+      <DependentUpon>TournamentOrganizerEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <DependentUpon>TournamentOrganizerEntities.tt</DependentUpon>
     </Compile>
@@ -64,6 +67,9 @@
       <DependentUpon>TournamentOrganizerEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefreshToken.cs">
+      <DependentUpon>TournamentOrganizerEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>TournamentOrganizerEntities.tt</DependentUpon>
     </Compile>

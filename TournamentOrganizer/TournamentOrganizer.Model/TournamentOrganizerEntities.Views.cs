@@ -11,7 +11,7 @@ using System.Data.Entity.Infrastructure.MappingViews;
 
 [assembly: DbMappingViewCacheTypeAttribute(
     typeof(TournamentOrganizer.Model.TournamentOrganizerEntities),
-    typeof(Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets574073b30025e8fc1eb9486feaaf027d7c223e22d73415eda2f7438abcc7a1db))]
+    typeof(Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets41b6af922010456164e56415c118cf6705e67a4eac6f8c95a65317731f9be48a))]
 
 namespace Edm_EntityMappingGeneratedViews
 {
@@ -23,14 +23,14 @@ namespace Edm_EntityMappingGeneratedViews
     /// Implements a mapping view cache.
     /// </summary>
     [GeneratedCode("Entity Framework Power Tools", "0.9.0.0")]
-    internal sealed class ViewsForBaseEntitySets574073b30025e8fc1eb9486feaaf027d7c223e22d73415eda2f7438abcc7a1db : DbMappingViewCache
+    internal sealed class ViewsForBaseEntitySets41b6af922010456164e56415c118cf6705e67a4eac6f8c95a65317731f9be48a : DbMappingViewCache
     {
         /// <summary>
         /// Gets a hash value computed over the mapping closure.
         /// </summary>
         public override string MappingHashValue
         {
-            get { return "574073b30025e8fc1eb9486feaaf027d7c223e22d73415eda2f7438abcc7a1db"; }
+            get { return "41b6af922010456164e56415c118cf6705e67a4eac6f8c95a65317731f9be48a"; }
         }
 
         /// <summary>
@@ -47,144 +47,210 @@ namespace Edm_EntityMappingGeneratedViews
 
             var extentName = extent.EntityContainer.Name + "." + extent.Name;
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Game")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Clients")
             {
                 return GetView0();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Gender")
+            if (extentName == "TournamentOrganizerEntities.Clients")
             {
                 return GetView1();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Match")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Game")
             {
                 return GetView2();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Participant")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Gender")
             {
                 return GetView3();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Role")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Match")
             {
                 return GetView4();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Score")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Participant")
             {
                 return GetView5();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Stage")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Role")
             {
                 return GetView6();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Subdivision")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Score")
             {
                 return GetView7();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Team")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Stage")
             {
                 return GetView8();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.TeamParticipant")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Subdivision")
             {
                 return GetView9();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.Tournament")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Team")
             {
                 return GetView10();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.User")
+            if (extentName == "TournamentOrganizerModelStoreContainer.TeamParticipant")
             {
                 return GetView11();
             }
 
-            if (extentName == "TournamentOrganizerModelStoreContainer.UserState")
+            if (extentName == "TournamentOrganizerModelStoreContainer.Tournament")
             {
                 return GetView12();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Games")
+            if (extentName == "TournamentOrganizerModelStoreContainer.User")
             {
                 return GetView13();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Genders")
+            if (extentName == "TournamentOrganizerModelStoreContainer.UserState")
             {
                 return GetView14();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Matches")
+            if (extentName == "TournamentOrganizerEntities.Games")
             {
                 return GetView15();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Participants")
+            if (extentName == "TournamentOrganizerEntities.Genders")
             {
                 return GetView16();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Roles")
+            if (extentName == "TournamentOrganizerEntities.Matches")
             {
                 return GetView17();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Scores")
+            if (extentName == "TournamentOrganizerEntities.Participants")
             {
                 return GetView18();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Stages")
+            if (extentName == "TournamentOrganizerEntities.Roles")
             {
                 return GetView19();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Subdivisions")
+            if (extentName == "TournamentOrganizerEntities.Scores")
             {
                 return GetView20();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Teams")
+            if (extentName == "TournamentOrganizerEntities.Stages")
             {
                 return GetView21();
             }
 
-            if (extentName == "TournamentOrganizerEntities.TeamParticipants")
+            if (extentName == "TournamentOrganizerEntities.Subdivisions")
             {
                 return GetView22();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Tournaments")
+            if (extentName == "TournamentOrganizerEntities.Teams")
             {
                 return GetView23();
             }
 
-            if (extentName == "TournamentOrganizerEntities.Users")
+            if (extentName == "TournamentOrganizerEntities.TeamParticipants")
             {
                 return GetView24();
             }
 
-            if (extentName == "TournamentOrganizerEntities.UserStates")
+            if (extentName == "TournamentOrganizerEntities.Tournaments")
             {
                 return GetView25();
+            }
+
+            if (extentName == "TournamentOrganizerEntities.Users")
+            {
+                return GetView26();
+            }
+
+            if (extentName == "TournamentOrganizerEntities.UserStates")
+            {
+                return GetView27();
+            }
+
+            if (extentName == "TournamentOrganizerModelStoreContainer.RefreshTokens")
+            {
+                return GetView28();
+            }
+
+            if (extentName == "TournamentOrganizerEntities.RefreshTokens")
+            {
+                return GetView29();
             }
 
             return null;
         }
 
         /// <summary>
-        /// Gets the view for TournamentOrganizerModelStoreContainer.Game.
+        /// Gets the view for TournamentOrganizerModelStoreContainer.Clients.
         /// </summary>
         /// <returns>The mapping view.</returns>
         private static DbMappingView GetView0()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Clients
+        [TournamentOrganizerModel.Store.Clients](T1.Clients_Id, T1.Clients_Secret, T1.Clients_Name, T1.Clients_ApplicationType, T1.Clients_Active, T1.Clients_RefreshTokenLifeTime, T1.Clients_AllowedOrigin)
+    FROM (
+        SELECT 
+            T.Id AS Clients_Id, 
+            T.Secret AS Clients_Secret, 
+            T.Name AS Clients_Name, 
+            T.ApplicationType AS Clients_ApplicationType, 
+            T.Active AS Clients_Active, 
+            T.RefreshTokenLifeTime AS Clients_RefreshTokenLifeTime, 
+            T.AllowedOrigin AS Clients_AllowedOrigin, 
+            True AS _from0
+        FROM TournamentOrganizerEntities.Clients AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for TournamentOrganizerEntities.Clients.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView1()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing Clients
+        [TournamentOrganizerModel.Client](T1.Client_Id, T1.Client_Secret, T1.Client_Name, T1.Client_ApplicationType, T1.Client_Active, T1.Client_RefreshTokenLifeTime, T1.Client_AllowedOrigin)
+    FROM (
+        SELECT 
+            T.Id AS Client_Id, 
+            T.Secret AS Client_Secret, 
+            T.Name AS Client_Name, 
+            T.ApplicationType AS Client_ApplicationType, 
+            T.Active AS Client_Active, 
+            T.RefreshTokenLifeTime AS Client_RefreshTokenLifeTime, 
+            T.AllowedOrigin AS Client_AllowedOrigin, 
+            True AS _from0
+        FROM TournamentOrganizerModelStoreContainer.Clients AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for TournamentOrganizerModelStoreContainer.Game.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView2()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Game
@@ -202,7 +268,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Gender.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView1()
+        private static DbMappingView GetView3()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Gender
@@ -220,7 +286,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Match.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView2()
+        private static DbMappingView GetView4()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Match
@@ -242,7 +308,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Participant.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView3()
+        private static DbMappingView GetView5()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Participant
@@ -261,7 +327,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Role.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView4()
+        private static DbMappingView GetView6()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Role
@@ -279,7 +345,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Score.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView5()
+        private static DbMappingView GetView7()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Score
@@ -299,7 +365,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Stage.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView6()
+        private static DbMappingView GetView8()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Stage
@@ -318,7 +384,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Subdivision.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView7()
+        private static DbMappingView GetView9()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Subdivision
@@ -337,7 +403,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Team.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView8()
+        private static DbMappingView GetView10()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Team
@@ -356,7 +422,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.TeamParticipant.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView9()
+        private static DbMappingView GetView11()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing TeamParticipant
@@ -375,7 +441,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.Tournament.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView10()
+        private static DbMappingView GetView12()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Tournament
@@ -394,18 +460,17 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.User.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView11()
+        private static DbMappingView GetView13()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing User
-        [TournamentOrganizerModel.Store.User](T1.User_Id, T1.User_Email, T1.User_Password, T1.User_Firstname, T1.User_Lastname, T1.User_Avatar, T1.User_GenderId, T1.User_RoleId, T1.User_StatusId, T1.User_IsDeleted, T1.User_LastLoginDate, T1.User_LastPasswordChangedDate, T1.User_ForgotPasswordToken, T1.User_ForgotPasswordTokenSentOn, T1.User_CreatedBy, T1.User_CreatedOn, T1.User_ModifiedBy, T1.User_ModifiedOn)
+        [TournamentOrganizerModel.Store.User](T1.User_Id, T1.User_Username, T1.User_Password, T1.User_Name, T1.User_Avatar, T1.User_GenderId, T1.User_RoleId, T1.User_StatusId, T1.User_IsDeleted, T1.User_LastLoginDate, T1.User_LastPasswordChangedDate, T1.User_ForgotPasswordToken, T1.User_ForgotPasswordTokenSentOn, T1.User_CreatedBy, T1.User_CreatedOn, T1.User_ModifiedBy, T1.User_ModifiedOn, T1.User_SecurityStamp)
     FROM (
         SELECT 
             T.Id AS User_Id, 
-            T.Email AS User_Email, 
+            T.Username AS User_Username, 
             T.Password AS User_Password, 
-            T.Firstname AS User_Firstname, 
-            T.Lastname AS User_Lastname, 
+            T.Name AS User_Name, 
             T.Avatar AS User_Avatar, 
             T.GenderId AS User_GenderId, 
             T.RoleId AS User_RoleId, 
@@ -419,6 +484,7 @@ namespace Edm_EntityMappingGeneratedViews
             T.CreatedOn AS User_CreatedOn, 
             T.ModifiedBy AS User_ModifiedBy, 
             T.ModifiedOn AS User_ModifiedOn, 
+            T.SecurityStamp AS User_SecurityStamp, 
             True AS _from0
         FROM TournamentOrganizerEntities.Users AS T
     ) AS T1");
@@ -428,7 +494,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerModelStoreContainer.UserState.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView12()
+        private static DbMappingView GetView14()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing UserState
@@ -446,7 +512,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Games.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView13()
+        private static DbMappingView GetView15()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Games
@@ -464,7 +530,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Genders.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView14()
+        private static DbMappingView GetView16()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Genders
@@ -482,7 +548,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Matches.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView15()
+        private static DbMappingView GetView17()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Matches
@@ -504,7 +570,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Participants.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView16()
+        private static DbMappingView GetView18()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Participants
@@ -523,7 +589,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Roles.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView17()
+        private static DbMappingView GetView19()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Roles
@@ -541,7 +607,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Scores.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView18()
+        private static DbMappingView GetView20()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Scores
@@ -561,7 +627,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Stages.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView19()
+        private static DbMappingView GetView21()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Stages
@@ -580,7 +646,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Subdivisions.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView20()
+        private static DbMappingView GetView22()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Subdivisions
@@ -599,7 +665,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Teams.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView21()
+        private static DbMappingView GetView23()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Teams
@@ -618,7 +684,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.TeamParticipants.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView22()
+        private static DbMappingView GetView24()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing TeamParticipants
@@ -637,7 +703,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Tournaments.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView23()
+        private static DbMappingView GetView25()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Tournaments
@@ -656,18 +722,17 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.Users.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView24()
+        private static DbMappingView GetView26()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing Users
-        [TournamentOrganizerModel.User](T1.User_Id, T1.User_Email, T1.User_Password, T1.User_Firstname, T1.User_Lastname, T1.User_Avatar, T1.User_GenderId, T1.User_RoleId, T1.User_StatusId, T1.User_IsDeleted, T1.User_LastLoginDate, T1.User_LastPasswordChangedDate, T1.User_ForgotPasswordToken, T1.User_ForgotPasswordTokenSentOn, T1.User_CreatedBy, T1.User_CreatedOn, T1.User_ModifiedBy, T1.User_ModifiedOn)
+        [TournamentOrganizerModel.User](T1.User_Id, T1.User_Username, T1.User_Password, T1.User_Name, T1.User_Avatar, T1.User_GenderId, T1.User_RoleId, T1.User_StatusId, T1.User_IsDeleted, T1.User_LastLoginDate, T1.User_LastPasswordChangedDate, T1.User_ForgotPasswordToken, T1.User_ForgotPasswordTokenSentOn, T1.User_CreatedBy, T1.User_CreatedOn, T1.User_ModifiedBy, T1.User_ModifiedOn, T1.User_SecurityStamp)
     FROM (
         SELECT 
             T.Id AS User_Id, 
-            T.Email AS User_Email, 
+            T.Username AS User_Username, 
             T.Password AS User_Password, 
-            T.Firstname AS User_Firstname, 
-            T.Lastname AS User_Lastname, 
+            T.Name AS User_Name, 
             T.Avatar AS User_Avatar, 
             T.GenderId AS User_GenderId, 
             T.RoleId AS User_RoleId, 
@@ -681,6 +746,7 @@ namespace Edm_EntityMappingGeneratedViews
             T.CreatedOn AS User_CreatedOn, 
             T.ModifiedBy AS User_ModifiedBy, 
             T.ModifiedOn AS User_ModifiedOn, 
+            T.SecurityStamp AS User_SecurityStamp, 
             True AS _from0
         FROM TournamentOrganizerModelStoreContainer.User AS T
     ) AS T1");
@@ -690,7 +756,7 @@ namespace Edm_EntityMappingGeneratedViews
         /// Gets the view for TournamentOrganizerEntities.UserStates.
         /// </summary>
         /// <returns>The mapping view.</returns>
-        private static DbMappingView GetView25()
+        private static DbMappingView GetView27()
         {
             return new DbMappingView(@"
     SELECT VALUE -- Constructing UserStates
@@ -701,6 +767,50 @@ namespace Edm_EntityMappingGeneratedViews
             T.Name AS UserState_Name, 
             True AS _from0
         FROM TournamentOrganizerModelStoreContainer.UserState AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for TournamentOrganizerModelStoreContainer.RefreshTokens.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView28()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing RefreshTokens
+        [TournamentOrganizerModel.Store.RefreshTokens](T1.RefreshTokens_Id, T1.RefreshTokens_Username, T1.RefreshTokens_ClientId, T1.RefreshTokens_IssuedUtc, T1.RefreshTokens_ExpiresUtc, T1.RefreshTokens_ProtectedTicket)
+    FROM (
+        SELECT 
+            T.Id AS RefreshTokens_Id, 
+            T.Username AS RefreshTokens_Username, 
+            T.ClientId AS RefreshTokens_ClientId, 
+            T.IssuedUtc AS RefreshTokens_IssuedUtc, 
+            T.ExpiresUtc AS RefreshTokens_ExpiresUtc, 
+            T.ProtectedTicket AS RefreshTokens_ProtectedTicket, 
+            True AS _from0
+        FROM TournamentOrganizerEntities.RefreshTokens AS T
+    ) AS T1");
+        }
+
+        /// <summary>
+        /// Gets the view for TournamentOrganizerEntities.RefreshTokens.
+        /// </summary>
+        /// <returns>The mapping view.</returns>
+        private static DbMappingView GetView29()
+        {
+            return new DbMappingView(@"
+    SELECT VALUE -- Constructing RefreshTokens
+        [TournamentOrganizerModel.RefreshToken](T1.RefreshToken_Id, T1.RefreshToken_Username, T1.RefreshToken_ClientId, T1.RefreshToken_IssuedUtc, T1.RefreshToken_ExpiresUtc, T1.RefreshToken_ProtectedTicket)
+    FROM (
+        SELECT 
+            T.Id AS RefreshToken_Id, 
+            T.Username AS RefreshToken_Username, 
+            T.ClientId AS RefreshToken_ClientId, 
+            T.IssuedUtc AS RefreshToken_IssuedUtc, 
+            T.ExpiresUtc AS RefreshToken_ExpiresUtc, 
+            T.ProtectedTicket AS RefreshToken_ProtectedTicket, 
+            True AS _from0
+        FROM TournamentOrganizerModelStoreContainer.RefreshTokens AS T
     ) AS T1");
         }
     }

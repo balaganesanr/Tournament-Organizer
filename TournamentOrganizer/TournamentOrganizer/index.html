@@ -19,10 +19,16 @@
     <link rel="stylesheet" type="text/css" href="MainApp/assets/Sementic-ui/components/list.css">
     <link rel="stylesheet" type="text/css" href="MainApp/assets/Sementic-ui/components/message.css">
     <link rel="stylesheet" type="text/css" href="MainApp/assets/Sementic-ui/components/icon.css">
+    <link href="MainApp/assets/Sementic-ui/components/transition.css" rel="stylesheet" />
+    <link href="MainApp/assets/Sementic-ui/components/loader.min.css" rel="stylesheet" />
 
+    <link href="MainApp/scripts/angular/angular_ui_notification/angular-ui-notification.min.css" rel="stylesheet" />
     <link href="MainApp/assets/style.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="ui active dimmer" ng-if="globalValues.isLoading">
+        <div class="ui loader"></div>
+    </div>
     <div data-ui-view="ParentView" class="container-wrapper">
 
     </div>

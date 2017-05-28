@@ -2,9 +2,7 @@
 define(['angular'], function (angular) {
 
     var tournamentOrganiser = angular
-         .module('tournamentOrganiser')
-
-
+         .module('tournamentOrganiser');
 
     tournamentOrganiser.registerController('LoginController',
      ['$scope', '$http', '$window', '$timeout',
@@ -16,7 +14,16 @@ define(['angular'], function (angular) {
 
     function LoginController($scope, $http, $window, $timeout, $filter, Enum, $q, $http, $ocLazyLoad, authService, $injector) {
         var vm = this;
+        vm.user = { username: "", password: "" };
 
+        function login(user, form) {
+            var $validationProvider = $injector.get('$validation');
+            //if (!$validationProvider.checkValid(form))
+            //    return;
+            authService.login(user);
+        }
+
+        vm.login = login;
         return vm;
     }
 });

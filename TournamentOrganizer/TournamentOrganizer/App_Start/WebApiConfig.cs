@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Net.Http.Formatting;
 using System.Web.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace TournamentOrganizer
 {
@@ -16,9 +16,19 @@ namespace TournamentOrganizer
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "tournamentOrganiserApi/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Formatters.Clear();
+            config.Formatters.Add(new JsonMediaTypeFormatter
+            {
+                SerializerSettings = new JsonSerializerSettings()
+            });
+
+            var jsonFormatter = config.Formatters.JsonFormatter;
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            jsonFormatter.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
         }
     }
 }

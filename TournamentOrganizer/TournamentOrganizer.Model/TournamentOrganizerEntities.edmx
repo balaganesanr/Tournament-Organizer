@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="TournamentOrganizerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Secret" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApplicationType" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="RefreshTokenLifeTime" Type="int" Nullable="false" />
+          <Property Name="AllowedOrigin" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="Game">
           <Key>
             <PropertyRef Name="Id" />
@@ -37,6 +49,17 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="SubdivisionId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RefreshTokens">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ClientId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IssuedUtc" Type="datetime" Nullable="false" />
+          <Property Name="ExpiresUtc" Type="datetime" Nullable="false" />
+          <Property Name="ProtectedTicket" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -99,10 +122,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="Firstname" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Lastname" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="256" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
           <Property Name="Avatar" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="GenderId" Type="tinyint" Nullable="false" />
           <Property Name="RoleId" Type="tinyint" Nullable="false" />
@@ -116,6 +138,7 @@
           <Property Name="CreatedOn" Type="datetime" />
           <Property Name="ModifiedBy" Type="uniqueidentifier" />
           <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="SecurityStamp" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="UserState">
           <Key>
@@ -341,10 +364,12 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="TournamentOrganizerModelStoreContainer">
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Match" EntityType="Self.Match" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Participant" EntityType="Self.Participant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RefreshTokens" EntityType="Self.RefreshTokens" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Score" EntityType="Self.Score" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stage" EntityType="Self.Stage" Schema="dbo" store:Type="Tables" />
@@ -432,10 +457,12 @@
     <edmx:ConceptualModels>
       <Schema Namespace="TournamentOrganizerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="TournamentOrganizerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="TournamentOrganizerModel.Client" />
           <EntitySet Name="Games" EntityType="TournamentOrganizerModel.Game" />
           <EntitySet Name="Genders" EntityType="TournamentOrganizerModel.Gender" />
           <EntitySet Name="Matches" EntityType="TournamentOrganizerModel.Match" />
           <EntitySet Name="Participants" EntityType="TournamentOrganizerModel.Participant" />
+          <EntitySet Name="RefreshTokens" EntityType="TournamentOrganizerModel.RefreshToken" />
           <EntitySet Name="Roles" EntityType="TournamentOrganizerModel.Role" />
           <EntitySet Name="Scores" EntityType="TournamentOrganizerModel.Score" />
           <EntitySet Name="Stages" EntityType="TournamentOrganizerModel.Stage" />
@@ -518,6 +545,18 @@
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Secret" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationType" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="RefreshTokenLifeTime" Type="Int32" Nullable="false" />
+          <Property Name="AllowedOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="Game">
           <Key>
             <PropertyRef Name="Id" />
@@ -559,6 +598,17 @@
           <NavigationProperty Name="Subdivision" Relationship="TournamentOrganizerModel.FK_Participant_Subdivision" FromRole="Participant" ToRole="Subdivision" />
           <NavigationProperty Name="User" Relationship="TournamentOrganizerModel.FK_Participant_User" FromRole="Participant" ToRole="User" />
           <NavigationProperty Name="TeamParticipants" Relationship="TournamentOrganizerModel.FK_TeamParticipant_Participant" FromRole="Participant" ToRole="TeamParticipant" />
+        </EntityType>
+        <EntityType Name="RefreshToken">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClientId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IssuedUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExpiresUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProtectedTicket" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -639,10 +689,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="Firstname" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Lastname" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Avatar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="GenderId" Type="Byte" Nullable="false" />
           <Property Name="RoleId" Type="Byte" Nullable="false" />
@@ -656,6 +705,7 @@
           <Property Name="CreatedOn" Type="DateTime" Precision="3" />
           <Property Name="ModifiedBy" Type="Guid" />
           <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Gender" Relationship="TournamentOrganizerModel.FK_User_Gender" FromRole="User" ToRole="Gender" />
           <NavigationProperty Name="Participants" Relationship="TournamentOrganizerModel.FK_Participant_User" FromRole="User" ToRole="Participant" />
           <NavigationProperty Name="Role" Relationship="TournamentOrganizerModel.FK_User_Role" FromRole="User" ToRole="Role" />
@@ -889,12 +939,25 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="TournamentOrganizerModelStoreContainer" CdmEntityContainer="TournamentOrganizerEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="TournamentOrganizerModel.Client">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="AllowedOrigin" ColumnName="AllowedOrigin" />
+                <ScalarProperty Name="RefreshTokenLifeTime" ColumnName="RefreshTokenLifeTime" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ApplicationType" ColumnName="ApplicationType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Secret" ColumnName="Secret" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Games">
             <EntityTypeMapping TypeName="TournamentOrganizerModel.Game">
               <MappingFragment StoreEntitySet="Game">
@@ -928,6 +991,18 @@
               <MappingFragment StoreEntitySet="Participant">
                 <ScalarProperty Name="SubdivisionId" ColumnName="SubdivisionId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RefreshTokens">
+            <EntityTypeMapping TypeName="TournamentOrganizerModel.RefreshToken">
+              <MappingFragment StoreEntitySet="RefreshTokens">
+                <ScalarProperty Name="ProtectedTicket" ColumnName="ProtectedTicket" />
+                <ScalarProperty Name="ExpiresUtc" ColumnName="ExpiresUtc" />
+                <ScalarProperty Name="IssuedUtc" ColumnName="IssuedUtc" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -998,6 +1073,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="TournamentOrganizerModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
                 <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
                 <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
                 <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
@@ -1011,10 +1087,9 @@
                 <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="GenderId" ColumnName="GenderId" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />
-                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
-                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

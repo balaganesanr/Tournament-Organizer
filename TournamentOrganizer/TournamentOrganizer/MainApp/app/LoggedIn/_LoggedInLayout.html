@@ -1,3 +1,38 @@
-﻿<div class="loggedin-content-wrapper-sub1" data-ui-view>
+﻿<style>
+    .main.to_container {
+        padding-top: 6em;
+    }
+</style>
+<div class="ui large top fixed menu transition visible borderless to_mainheader">
+    <div class="ui container">
+        <div href="#" class="header item">
+            <img class="logo" src="imagehandler.ashx?fileName=gislen_icon.png&type=General"
+                 style="margin-right:0.5em;">
+            Tournamen Organiser
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <a href="javascript:void(0)" ng-click="vm.logout()">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="loggedin-content-wrapper-sub1 ui main container to_container" data-ui-view
+     set-main-content-height>
+
+</div>
+
+<div class="ui inverted vertical footer segment to_mainfooter">
+    <div class="ui center aligned container">
+        <div class="ui horizontal inverted small divided link list">
+
+            <a class="item" href="#">Site Map</a>
+            <a class="item" href="#">Contact Us</a>
+            <a class="item" href="#">Terms and Conditions</a>
+            <a class="item" href="#">Privacy Policy</a>
+        </div>
+    </div>
 </div>
