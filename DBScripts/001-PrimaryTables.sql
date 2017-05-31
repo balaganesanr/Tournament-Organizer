@@ -198,6 +198,35 @@ GO
 ALTER TABLE [dbo].[Score]  WITH CHECK ADD  CONSTRAINT [FK_Score_Team] FOREIGN KEY([WinnerTeamId]) REFERENCES [dbo].[Team] ([Id])
 GO
 
+CREATE TABLE [dbo].[Group](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](100) NOT NULL,
+	[StageId] [BIGINT] NOT NULL,
+ CONSTRAINT [PK_Group] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Group]  WITH CHECK ADD  CONSTRAINT [FK_Group_Stage] FOREIGN KEY([StageId]) REFERENCES [dbo].[Stage] ([Id])
+GO
+
+CREATE TABLE [dbo].[GroupTeam](
+	[Id] [BIGINT] IDENTITY(1,1) NOT NULL,
+	[GroupId] [INT] NOT NULL,
+	[TeamId] [BIGINT] NOT NULL,
+ CONSTRAINT [PK_GroupTeam] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[GroupTeam]  WITH CHECK ADD  CONSTRAINT [FK_GroupTeam_Group] FOREIGN KEY([GroupId]) REFERENCES [dbo].[Group] ([Id])
+ALTER TABLE [dbo].[GroupTeam]  WITH CHECK ADD  CONSTRAINT [FK_GroupTeam_Team] FOREIGN KEY([TeamId]) REFERENCES [dbo].[Team] ([Id])
+GO
+
 -- DATA START
 
 SET IDENTITY_INSERT [dbo].[UserState] ON
@@ -291,6 +320,103 @@ INSERT INTO [dbo].[Team]([Id],[Name],[SubdivisionId])VALUES(25,'Vishnu',1)
 INSERT INTO [dbo].[Team]([Id],[Name],[SubdivisionId])VALUES(26,'Viswa',1)
 INSERT INTO [dbo].[Team]([Id],[Name],[SubdivisionId])VALUES(27,'Yoga',3)
 SET IDENTITY_INSERT [dbo].[Team] OFF
+GO
+
+SET IDENTITY_INSERT [dbo].Stage ON
+INSERT INTO [dbo].Stage([Id],[Name],[SubdivisionId])VALUES(1,'Prelims',1)
+INSERT INTO [dbo].Stage([Id],[Name],[SubdivisionId])VALUES(2,'Prelims',3)
+SET IDENTITY_INSERT [dbo].Stage OFF
+GO
+
+SET IDENTITY_INSERT [dbo].[Group] ON
+INSERT INTO [dbo].[Group]([Id],[Name],[StageId])VALUES(1,'Pool A',1)
+INSERT INTO [dbo].[Group]([Id],[Name],[StageId])VALUES(2,'Pool B',1)
+INSERT INTO [dbo].[Group]([Id],[Name],[StageId])VALUES(3,'Pool C',1)
+INSERT INTO [dbo].[Group]([Id],[Name],[StageId])VALUES(4,'Pool D',1)
+SET IDENTITY_INSERT [dbo].[Group] OFF
+GO
+
+INSERT INTO [dbo].[Match]
+(
+	[StageId]
+    ,[Team1Id]
+    ,[Team2Id]
+    ,[ScheduledDate]
+    ,[WinnerTeamId]
+)
+SELECT
+	CASE WHEN A.SubdivisionId = 1 THEN 1 ELSE 2 END,
+	A.Id,
+	B.Id,
+	GETDATE(),
+	NULL
+FROM Team A,TEAM B
+WHERE A.Id <> B.ID AND A.SubdivisionId = B.SubdivisionId
+GO
+
+INSERT INTO [dbo].[GroupTeam]([GroupId],[TeamId])
+SELECT 1, Id
+FROM Team 
+WHERE 
+	SubdivisionId = 1
+GO
+
+UPDATE G SET G.GroupId = 1
+--SELECT *
+FROM [GroupTeam] G
+JOIN Team T ON G.[TeamId] = T.Id
+WHERE
+	T.Id IN
+	(
+		4,
+		5,
+		9,
+		14,
+		21
+	)
+
+UPDATE G SET G.GroupId = 2
+--SELECT *
+FROM [GroupTeam] G
+JOIN Team T ON G.[TeamId] = T.Id
+WHERE
+	T.Id IN
+	(
+		3,
+		12,
+		13,
+		20,
+		26
+	)
+
+
+UPDATE G SET G.GroupId = 3
+--SELECT *
+FROM [GroupTeam] G
+JOIN Team T ON G.[TeamId] = T.Id
+WHERE
+	T.Id IN
+	(
+		7,
+		15,
+		16,
+		18,
+		19
+	)
+
+UPDATE G SET G.GroupId = 4
+--SELECT *
+FROM [GroupTeam] G
+JOIN Team T ON G.[TeamId] = T.Id
+WHERE
+	T.Id IN
+	(
+		8,
+		17,
+		10,
+		25,
+		26
+	)
 GO
 
 -- DATA END

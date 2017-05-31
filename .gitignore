@@ -12,3 +12,8 @@
 *.suo
 *.cache
 *.pdb
+*.cache
+*.dll
+*.dll
+TournamentOrganizer/.vs/TournamentOrganizer/v14/.suo
+*.config

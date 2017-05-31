@@ -5,23 +5,28 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="67decbf6442a489dbb0577543597ee0c" Name="Diagram1">
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Client" Width="1.5" PointX="7.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Client" Width="1.5" PointX="9.75" PointY="12.875" />
         <EntityTypeShape EntityType="TournamentOrganizerModel.Game" Width="1.5" PointX="1.5" PointY="14.375" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Gender" Width="1.5" PointX="0.75" PointY="8.5" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Match" Width="1.5" PointX="10.5" PointY="4.75" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Participant" Width="1.5" PointX="5.25" PointY="5" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.RefreshToken" Width="1.5" PointX="9.75" PointY="8.75" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Role" Width="1.5" PointX="0.75" PointY="5.375" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Score" Width="1.5" PointX="7.5" PointY="1.875" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Gender" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Group" Width="1.5" PointX="7.5" PointY="13.5" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.GroupTeam" Width="1.5" PointX="9.75" PointY="9.125" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Match" Width="1.5" PointX="10.5" PointY="4.875" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Participant" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.RefreshToken" Width="1.5" PointX="11.75" PointY="8.875" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Role" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Score" Width="1.5" PointX="7.5" PointY="2" />
         <EntityTypeShape EntityType="TournamentOrganizerModel.Stage" Width="1.5" PointX="5.25" PointY="9.75" />
         <EntityTypeShape EntityType="TournamentOrganizerModel.Subdivision" Width="1.5" PointX="3" PointY="11" />
         <EntityTypeShape EntityType="TournamentOrganizerModel.Team" Width="1.5" PointX="5.25" PointY="0.75" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.TeamParticipant" Width="1.5" PointX="7.5" PointY="5.125" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.Tournament" Width="1.5" PointX="0.75" PointY="11.125" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.User" Width="1.5" PointX="3" PointY="3.125" />
-        <EntityTypeShape EntityType="TournamentOrganizerModel.UserState" Width="1.5" PointX="0.75" PointY="2.125" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.TeamParticipant" Width="1.5" PointX="7.5" PointY="5.25" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.Tournament" Width="1.5" PointX="0.75" PointY="11.25" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.User" Width="1.5" PointX="3" PointY="3.25" />
+        <EntityTypeShape EntityType="TournamentOrganizerModel.UserState" Width="1.5" PointX="0.75" PointY="2.25" />
         <AssociationConnector Association="TournamentOrganizerModel.FK_Tournament_GameId" />
         <AssociationConnector Association="TournamentOrganizerModel.FK_User_Gender" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_Group_Stage" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_GroupTeam_Group" />
+        <AssociationConnector Association="TournamentOrganizerModel.FK_GroupTeam_Team" />
         <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Stage" />
         <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Team" />
         <AssociationConnector Association="TournamentOrganizerModel.FK_Match_Team1" />

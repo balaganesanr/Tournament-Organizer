@@ -28,6 +28,8 @@ namespace TournamentOrganizer.Model
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<Gender> Genders { get; set; }
+        public virtual DbSet<Group> Groups { get; set; }
+        public virtual DbSet<GroupTeam> GroupTeams { get; set; }
         public virtual DbSet<Match> Matches { get; set; }
         public virtual DbSet<Participant> Participants { get; set; }
         public virtual DbSet<RefreshToken> RefreshTokens { get; set; }

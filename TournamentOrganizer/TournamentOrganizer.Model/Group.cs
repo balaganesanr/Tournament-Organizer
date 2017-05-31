@@ -12,23 +12,20 @@ namespace TournamentOrganizer.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Stage
+    public partial class Group
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Stage()
+        public Group()
         {
-            this.Groups = new HashSet<Group>();
-            this.Matches = new HashSet<Match>();
+            this.GroupTeams = new HashSet<GroupTeam>();
         }
     
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public int SubdivisionId { get; set; }
+        public long StageId { get; set; }
     
+        public virtual Stage Stage { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Group> Groups { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Match> Matches { get; set; }
-        public virtual Subdivision Subdivision { get; set; }
+        public virtual ICollection<GroupTeam> GroupTeams { get; set; }
     }
 }

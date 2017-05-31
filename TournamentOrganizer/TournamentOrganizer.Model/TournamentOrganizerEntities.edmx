@@ -31,6 +31,22 @@
           <Property Name="ID" Type="tinyint" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="StageId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GroupTeam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="TeamId" Type="bigint" Nullable="false" />
+        </EntityType>
         <EntityType Name="Match">
           <Key>
             <PropertyRef Name="Id" />
@@ -147,6 +163,42 @@
           <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Group_Stage">
+          <End Role="Stage" Type="Self.Stage" Multiplicity="1" />
+          <End Role="Group" Type="Self.Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Group">
+              <PropertyRef Name="StageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupTeam_Group">
+          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="GroupTeam" Type="Self.GroupTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupTeam">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupTeam_Team">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="GroupTeam" Type="Self.GroupTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupTeam">
+              <PropertyRef Name="TeamId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Match_Stage">
           <End Role="Stage" Type="Self.Stage" Multiplicity="1" />
           <End Role="Match" Type="Self.Match" Multiplicity="*" />
@@ -367,6 +419,8 @@
           <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupTeam" EntityType="Self.GroupTeam" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Match" EntityType="Self.Match" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Participant" EntityType="Self.Participant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RefreshTokens" EntityType="Self.RefreshTokens" Schema="dbo" store:Type="Tables" />
@@ -379,6 +433,18 @@
           <EntitySet Name="Tournament" EntityType="Self.Tournament" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserState" EntityType="Self.UserState" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Group_Stage" Association="Self.FK_Group_Stage">
+            <End Role="Stage" EntitySet="Stage" />
+            <End Role="Group" EntitySet="Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupTeam_Group" Association="Self.FK_GroupTeam_Group">
+            <End Role="Group" EntitySet="Group" />
+            <End Role="GroupTeam" EntitySet="GroupTeam" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupTeam_Team" Association="Self.FK_GroupTeam_Team">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="GroupTeam" EntitySet="GroupTeam" />
+          </AssociationSet>
           <AssociationSet Name="FK_Match_Stage" Association="Self.FK_Match_Stage">
             <End Role="Stage" EntitySet="Stage" />
             <End Role="Match" EntitySet="Match" />
@@ -460,6 +526,8 @@
           <EntitySet Name="Clients" EntityType="TournamentOrganizerModel.Client" />
           <EntitySet Name="Games" EntityType="TournamentOrganizerModel.Game" />
           <EntitySet Name="Genders" EntityType="TournamentOrganizerModel.Gender" />
+          <EntitySet Name="Groups" EntityType="TournamentOrganizerModel.Group" />
+          <EntitySet Name="GroupTeams" EntityType="TournamentOrganizerModel.GroupTeam" />
           <EntitySet Name="Matches" EntityType="TournamentOrganizerModel.Match" />
           <EntitySet Name="Participants" EntityType="TournamentOrganizerModel.Participant" />
           <EntitySet Name="RefreshTokens" EntityType="TournamentOrganizerModel.RefreshToken" />
@@ -479,6 +547,18 @@
           <AssociationSet Name="FK_User_Gender" Association="TournamentOrganizerModel.FK_User_Gender">
             <End Role="Gender" EntitySet="Genders" />
             <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Group_Stage" Association="TournamentOrganizerModel.FK_Group_Stage">
+            <End Role="Stage" EntitySet="Stages" />
+            <End Role="Group" EntitySet="Groups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupTeam_Group" Association="TournamentOrganizerModel.FK_GroupTeam_Group">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="GroupTeam" EntitySet="GroupTeams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GroupTeam_Team" Association="TournamentOrganizerModel.FK_GroupTeam_Team">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="GroupTeam" EntitySet="GroupTeams" />
           </AssociationSet>
           <AssociationSet Name="FK_Match_Stage" Association="TournamentOrganizerModel.FK_Match_Stage">
             <End Role="Stage" EntitySet="Stages" />
@@ -573,6 +653,26 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Users" Relationship="TournamentOrganizerModel.FK_User_Gender" FromRole="Gender" ToRole="User" />
         </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="StageId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Stage" Relationship="TournamentOrganizerModel.FK_Group_Stage" FromRole="Group" ToRole="Stage" />
+          <NavigationProperty Name="GroupTeams" Relationship="TournamentOrganizerModel.FK_GroupTeam_Group" FromRole="Group" ToRole="GroupTeam" />
+        </EntityType>
+        <EntityType Name="GroupTeam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="TeamId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="TournamentOrganizerModel.FK_GroupTeam_Group" FromRole="GroupTeam" ToRole="Group" />
+          <NavigationProperty Name="Team" Relationship="TournamentOrganizerModel.FK_GroupTeam_Team" FromRole="GroupTeam" ToRole="Team" />
+        </EntityType>
         <EntityType Name="Match">
           <Key>
             <PropertyRef Name="Id" />
@@ -635,6 +735,7 @@
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SubdivisionId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Groups" Relationship="TournamentOrganizerModel.FK_Group_Stage" FromRole="Stage" ToRole="Group" />
           <NavigationProperty Name="Matches" Relationship="TournamentOrganizerModel.FK_Match_Stage" FromRole="Stage" ToRole="Match" />
           <NavigationProperty Name="Subdivision" Relationship="TournamentOrganizerModel.FK_Stage_Subdivision" FromRole="Stage" ToRole="Subdivision" />
         </EntityType>
@@ -657,6 +758,7 @@
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="SubdivisionId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="GroupTeams" Relationship="TournamentOrganizerModel.FK_GroupTeam_Team" FromRole="Team" ToRole="GroupTeam" />
           <NavigationProperty Name="Matches" Relationship="TournamentOrganizerModel.FK_Match_Team" FromRole="Team" ToRole="Match" />
           <NavigationProperty Name="Matches1" Relationship="TournamentOrganizerModel.FK_Match_Team1" FromRole="Team" ToRole="Match" />
           <NavigationProperty Name="Matches2" Relationship="TournamentOrganizerModel.FK_Match_Team2" FromRole="Team" ToRole="Match" />
@@ -744,6 +846,42 @@
             </Principal>
             <Dependent Role="User">
               <PropertyRef Name="GenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Group_Stage">
+          <End Type="TournamentOrganizerModel.Stage" Role="Stage" Multiplicity="1" />
+          <End Type="TournamentOrganizerModel.Group" Role="Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Group">
+              <PropertyRef Name="StageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupTeam_Group">
+          <End Type="TournamentOrganizerModel.Group" Role="Group" Multiplicity="1" />
+          <End Type="TournamentOrganizerModel.GroupTeam" Role="GroupTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupTeam">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GroupTeam_Team">
+          <End Type="TournamentOrganizerModel.Team" Role="Team" Multiplicity="1" />
+          <End Type="TournamentOrganizerModel.GroupTeam" Role="GroupTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GroupTeam">
+              <PropertyRef Name="TeamId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -971,6 +1109,24 @@
               <MappingFragment StoreEntitySet="Gender">
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Groups">
+            <EntityTypeMapping TypeName="TournamentOrganizerModel.Group">
+              <MappingFragment StoreEntitySet="Group">
+                <ScalarProperty Name="StageId" ColumnName="StageId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupTeams">
+            <EntityTypeMapping TypeName="TournamentOrganizerModel.GroupTeam">
+              <MappingFragment StoreEntitySet="GroupTeam">
+                <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

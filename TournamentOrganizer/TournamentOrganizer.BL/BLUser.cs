@@ -12,169 +12,119 @@ namespace TournamentOrganizer.BL
     {
         public static bool AddRefreshToken(RefreshToken token)
         {
-            try
-            {
-                if (token == null)
-                    throw new Exception("Invalid refresh token");
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    context.RefreshTokens.Add(token);
-                    context.SaveChanges();
-                }
+            if (token == null)
+                throw new Exception("Invalid refresh token");
 
-                return true;
-            }
-            catch (Exception ex)
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                throw ex;
+                context.RefreshTokens.Add(token);
+                context.SaveChanges();
             }
+
+            return true;
         }
 
         public static bool DeleteRefreshToken(string refreshTokenId)
         {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(refreshTokenId))
-                    throw new Exception("Invalid refresh token");
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    context.Configuration.LazyLoadingEnabled = false;
-                    var token = context.RefreshTokens.Where(rt => rt.Id == refreshTokenId).FirstOrDefault();
-                    if (token != null)
-                        context.RefreshTokens.Remove(token);
-                    context.SaveChanges();
-                }
+            if (string.IsNullOrWhiteSpace(refreshTokenId))
+                throw new Exception("Invalid refresh token");
 
-                return true;
-            }
-            catch (Exception ex)
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                throw ex;
+                context.Configuration.LazyLoadingEnabled = false;
+                var token = context.RefreshTokens.Where(rt => rt.Id == refreshTokenId).FirstOrDefault();
+                if (token != null)
+                    context.RefreshTokens.Remove(token);
+                context.SaveChanges();
             }
+
+            return true;
+
         }
 
         public static RefreshToken FindRefreshToken(string refreshTokenId)
         {
             RefreshToken token = null;
-            try
-            {
-                if (string.IsNullOrWhiteSpace(refreshTokenId))
-                    throw new Exception("Invalid refresh token");
+            if (string.IsNullOrWhiteSpace(refreshTokenId))
+                throw new Exception("Invalid refresh token");
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    context.Configuration.LazyLoadingEnabled = false;
-                    token = context.RefreshTokens.Where(rt => rt.Id == refreshTokenId).FirstOrDefault();
-                }
-
-                return token;
-            }
-            catch (Exception ex)
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                throw ex;
+                context.Configuration.LazyLoadingEnabled = false;
+                token = context.RefreshTokens.Where(rt => rt.Id == refreshTokenId).FirstOrDefault();
             }
+
+            return token;
         }
         public static Client FindClient(string id)
         {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(id))
-                    throw new Exception("Invalid client id");
+            if (string.IsNullOrWhiteSpace(id))
+                throw new Exception("Invalid client id");
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    var clients = from c in context.Clients
-                                  where c.Id == id
-                                  select c;
-
-                    return clients.FirstOrDefault();
-                }
-            }
-            catch (Exception ex)
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                throw ex;
+                var clients = from c in context.Clients
+                              where c.Id == id
+                              select c;
+
+                return clients.FirstOrDefault();
             }
         }
         public static List<string> GetIdentityRoles(Guid userId)
         {
-            try
-            {
-                if (userId == Guid.Empty)
-                    throw new Exception("Invalid user name");
+            if (userId == Guid.Empty)
+                throw new Exception("Invalid user name");
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    var roles = from tuser in context.Users
-                                join role in context.Roles on tuser.RoleId equals role.Id
-                                where tuser.Id == userId
-                                select role.Name;
-
-                    return roles.ToList();
-                }
-            }
-            catch (Exception ex)
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                throw ex;
+                var roles = from tuser in context.Users
+                            join role in context.Roles on tuser.RoleId equals role.Id
+                            where tuser.Id == userId
+                            select role.Name;
+
+                return roles.ToList();
             }
         }
         public static User GetUser(string username)
         {
-            try
+            if (string.IsNullOrWhiteSpace(username))
+                throw new Exception("Invalid user name");
+
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                if (string.IsNullOrWhiteSpace(username))
-                    throw new Exception("Invalid user name");
+                var users = from u in context.Users
+                            where u.Username.Trim() == username.Trim()
+                            select u;
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    var users = from u in context.Users
-                                where u.Username.Trim() == username.Trim()
-                                select u;
+                var _users = users.ToList();
 
-                    if (users.FirstOrDefault() == null)
-                        throw new Exception("Invalid username or password.");
-                    if (users.ToList().Count > (int)NumericValues.ONE)
-                        throw new Exception("Some strange issue has occured. Please contact support team");
+                if (_users == null)
+                    throw new Exception("Invalid username or password.");
 
-                    return users.FirstOrDefault();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                if (_users.Count > (int)NumericValues.ONE)
+                    throw new Exception("Some strange issue has occurred. Please contact support team");
+
+                return _users.FirstOrDefault();
             }
         }
 
         public static TUser GetIdentityUser(string username)
         {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(username))
-                    throw new Exception("Invalid user name");
-                User user = GetUser(username);
-                return LoadUser(user) as TUser;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            if (string.IsNullOrWhiteSpace(username))
+                throw new Exception("Invalid user name");
+            User user = GetUser(username);
+            return LoadUser(user) as TUser;
         }
 
         public static TUser GetIdentityUser(Guid id)
         {
-            try
-            {
-                if (id == Guid.Empty)
-                    throw new Exception("Invalid user id");
+            if (id == Guid.Empty)
+                throw new Exception("Invalid user id");
 
-                User user = GetUser(id);
-                return LoadUser(user) as TUser;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            User user = GetUser(id);
+            return LoadUser(user) as TUser;
         }
 
         private static IdentityUsers LoadUser(User user)
@@ -203,26 +153,24 @@ namespace TournamentOrganizer.BL
         }
         public static User GetUser(Guid id)
         {
-            try
+            if (id == Guid.Empty)
+                throw new Exception("Invalid user id");
+
+            using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
             {
-                if (id == Guid.Empty)
+                var users = from u in context.Users
+                            where u.Id == id
+                            select u;
+
+                var _users = users.ToList();
+
+                if (_users == null)
                     throw new Exception("Invalid user id");
 
-                using (TournamentOrganizerEntities context = new TournamentOrganizerEntities())
-                {
-                    var users = from u in context.Users
-                                where u.Id == id
-                                select u;
+                if (_users.Count > (int)NumericValues.ONE)
+                    throw new Exception("Some strange issue has occurred. Please contact support team");
 
-                    if (users.ToList().Count > (int)NumericValues.ONE)
-                        throw new Exception("Some strange issue has occured. Please contact support team");
-
-                    return users.FirstOrDefault();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                return _users.FirstOrDefault();
             }
         }
     }
